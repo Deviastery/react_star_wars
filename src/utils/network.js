@@ -1,3 +1,8 @@
+/**
+ * Send a request Fetch
+ * @param {String} url - url for the request
+ * @returns {Promise} - Promise with result of the request
+ */
 export const getApiResource = async (url) => {
 
     try {
