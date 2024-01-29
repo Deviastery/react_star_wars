@@ -6,6 +6,7 @@ import { withErrorApi } from '@hoc-helpers/withErrorApi';
 
 import PersonInfo from "@components/PersonPage/PersonInfo";
 import PersonPhoto from "@components/PersonPage/PersonPhoto";
+import PersonFilms from "@components/PersonPage/PersonFilms";
 import PersonLinkBack from "@components/PersonPage/PersonLinkBack";
 
 import { getApiResource } from "@utils/network";
@@ -18,6 +19,7 @@ const PersonPage = ({ setErrorApi }) => {
     const [personInfo, setPersonInfo] = useState(null);
     const [personName, setPersonName] = useState(null);
     const [personPhoto, setPersonPhoto] = useState(null);
+    const [personFilms, setPersonFilms] = useState(null);
 
     const { id } = useParams();
 
@@ -39,7 +41,7 @@ const PersonPage = ({ setErrorApi }) => {
                 setPersonName(res.name);
                 setPersonPhoto(getPeopleImage(id));
 
-                //res.films
+                res.films.length && setPersonFilms(res.films);
 
                 setErrorApi(false);
             } else {
@@ -63,6 +65,8 @@ const PersonPage = ({ setErrorApi }) => {
                     />
 
                     {personInfo && <PersonInfo personInfo={personInfo} />}
+                    
+                    {personFilms && <PersonFilms personFilms={personFilms} />}
                 </div>
 
             </div>
