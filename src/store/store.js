@@ -3,4 +3,8 @@ import rootReducer from './reducers';
 
 const store = createStore(rootReducer);
 
+store.subscribe(() => {
+    
+})
+
 export default store;

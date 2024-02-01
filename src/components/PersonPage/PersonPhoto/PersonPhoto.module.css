@@ -1,4 +1,7 @@
 .container {
+    position: relative;
+    top: 0;
+    left: 0;
     width: 200px;
     height: 350px;
 }
@@ -8,4 +11,15 @@
     border-radius: var(--border-radius-medium);
     object-fit: cover;
     object-position: center center;
+}
+
+.favorite {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    object-position: center center;
+    cursor: pointer;
 }
