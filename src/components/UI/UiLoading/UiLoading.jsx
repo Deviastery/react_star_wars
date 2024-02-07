@@ -9,7 +9,7 @@ import loaderBlue from './img/loader_blue.svg';
 import styles from './UiLoading.module.css';
 
 const UiLoading = ({ 
-    theme = 'white',
+    theme = 'blue',
     isShadow=true,
     classes
 }) => {
@@ -20,9 +20,9 @@ const UiLoading = ({
             case 'black': setLoaderIcon(loaderBlack); break;
             case 'white': setLoaderIcon(loaderWhite); break;
             case 'blue': setLoaderIcon(loaderBlue); break;
-            default: setLoaderIcon(loaderWhite);
+            default: setLoaderIcon(loaderBlue);
         }
-    }, []);
+    }, [theme]);
 
     return (
         <img

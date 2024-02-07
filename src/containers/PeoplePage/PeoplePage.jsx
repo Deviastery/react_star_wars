@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { withErrorApi } from '@hoc-helpers/withErrorApi';
+import { useTheme, THEME_LIGHT, THEME_DARK, THEME_NEITRAL } from '@context/ThemeProvider';
+
 import PeopleList from '@components/PeoplePage/PeopleList';
 import PeopleNavigation from "@components/PeoplePage/PeopleNavigation";
 
@@ -21,6 +23,9 @@ const PeoplePage = ({ setErrorApi }) => {
     const [counterPage, setCounterPage] = useState(1);
 
     const [isLoading, setIsLoading] = useState(true);
+
+    const [colorLoader, setColorLoader] = useState('blue');
+    const isTheme = useTheme();
 
     const query = useQueryParams();
     const queryPage = query.get('page');
@@ -52,11 +57,21 @@ const PeoplePage = ({ setErrorApi }) => {
 
             setIsLoading(false);
         }
+
     }
 
     useEffect(() => {
         getResourse(API_PEOPLE+queryPage);
     }, []);
+
+    useEffect(() => {
+        switch (isTheme.theme) {
+            case THEME_LIGHT: setColorLoader('black'); break;
+            case THEME_DARK: setColorLoader('white'); break;
+            case THEME_NEITRAL: setColorLoader('blue'); break;
+            default: setColorLoader('blue');
+        }
+    }, [isTheme])
 
     return (
         <>
@@ -66,7 +81,7 @@ const PeoplePage = ({ setErrorApi }) => {
                 nextPage={nextPage}
                 counterPage={counterPage}
             />
-            {isLoading && <UiLoading classes={styles.people__loader} />}
+            {isLoading && <UiLoading classes={styles.people__loader} theme={colorLoader} />}
             {people && <PeopleList people={people} />} 
         </>
     )
