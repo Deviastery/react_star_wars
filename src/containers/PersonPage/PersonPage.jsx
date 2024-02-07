@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 
 import { withErrorApi } from '@hoc-helpers/withErrorApi';
+import { useTheme, THEME_LIGHT, THEME_DARK, THEME_NEITRAL } from '@context/ThemeProvider';
 
 import PersonInfo from "@components/PersonPage/PersonInfo";
 import PersonPhoto from "@components/PersonPage/PersonPhoto";
@@ -27,6 +28,9 @@ const PersonPage = ({ setErrorApi }) => {
     const [personFavorite, setPersonFavorite] = useState(false);
 
     const [isLoading, setIsLoading] = useState(true);
+
+    const [colorLoader, setColorLoader] = useState('blue');
+    const isTheme = useTheme();
 
     const storeData = useSelector(state => state.favoriteReducer);
 
@@ -67,6 +71,14 @@ const PersonPage = ({ setErrorApi }) => {
         })();
     }, []);
 
+    useEffect(() => {
+        switch (isTheme.theme) {
+            case THEME_LIGHT: setColorLoader('black'); break;
+            case THEME_DARK: setColorLoader('white'); break;
+            case THEME_NEITRAL: setColorLoader('blue'); break;
+            default: setColorLoader('blue');
+        }
+    }, [isTheme])
 
     return (
         <>
@@ -79,7 +91,7 @@ const PersonPage = ({ setErrorApi }) => {
 
                     <div className={styles.container__img}>
 
-                        {isLoading && <UiLoading classes={styles.people__loader} />}
+                        {isLoading && <UiLoading classes={styles.people__loader} theme={colorLoader} />}
 
                         <PersonPhoto 
                             personId={personId}
