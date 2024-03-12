@@ -1,5 +1,4 @@
 {
-  "homepage": "https://Deviastery.github.io/react_star_wars",
   "name": "react_star_wars",
   "version": "0.1.0",
   "private": true,
@@ -22,8 +21,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "eject": "react-scripts eject",
@@ -60,7 +57,6 @@
     "@storybook/react-webpack5": "^7.6.10",
     "@storybook/test": "^7.6.10",
     "eslint-plugin-storybook": "^0.6.15",
-    "gh-pages": "^6.1.1",
     "react-app-rewire-alias": "^1.1.7",
     "react-app-rewired": "^2.2.1",
     "storybook": "^7.6.10",
