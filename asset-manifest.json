@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/react_star_wars/static/css/main.d7884ac4.css",
+    "main.js": "/react_star_wars/static/js/main.6c83ec89.js",
+    "static/media/bg.jpg": "/react_star_wars/static/media/bg.29b25be31315dad3ce4e.jpg",
+    "static/media/falcon.jpg": "/react_star_wars/static/media/falcon.c1d0a8d1869b3fbdb9ab.jpg",
+    "static/media/white_not_found.png": "/react_star_wars/static/media/white_not_found.820b733daa6cfef73f21.png",
+    "static/media/han_solo.mp4": "/react_star_wars/static/media/han_solo.db435084c403f6b37d4d.mp4",
+    "static/media/dark_side.jpg": "/react_star_wars/static/media/dark_side.e0f8cab78e4bdd7db45d.jpg",
+    "static/media/light_side.jpg": "/react_star_wars/static/media/light_side.eebc52171cd4ac0278ca.jpg",
+    "static/media/favorite.png": "/react_star_wars/static/media/favorite.fb761c453351376d8d52.png",
+    "static/media/yoda.svg": "/react_star_wars/static/media/yoda.e973723aae59d27d3ee2c1b66d90363c.svg",
+    "static/media/r2d2.svg": "/react_star_wars/static/media/r2d2.9d70ae230acdd8bb3cdd0cd4b63b3e89.svg",
+    "static/media/favorite_fill.svg": "/react_star_wars/static/media/favorite_fill.8f3d633655966c5ddd33c24499ac85f8.svg",
+    "static/media/back.svg": "/react_star_wars/static/media/back.c62f8d2a90232f8ed1fc5290fd7e9e1f.svg",
+    "static/media/chubaka.svg": "/react_star_wars/static/media/chubaka.1470a5ecb4f5a4fe208fa28d7230328b.svg",
+    "index.html": "/react_star_wars/index.html",
+    "static/media/loader_black.svg": "/react_star_wars/static/media/loader_black.953411cea417def63c347c96fef68005.svg",
+    "static/media/loader_blue.svg": "/react_star_wars/static/media/loader_blue.da9473624e5a73cabf70cdf98c2a50ff.svg",
+    "static/media/loader_white.svg": "/react_star_wars/static/media/loader_white.2a99da1e7e4a7531bbc5b6ce22467ba9.svg",
+    "static/media/bookmark.svg": "/react_star_wars/static/media/bookmark.a035f8f350fed8ff53c9419361053213.svg",
+    "static/media/cansel.svg": "/react_star_wars/static/media/cansel.3d5ccb3c06264dd8a878a5a42f52d09e.svg",
+    "main.d7884ac4.css.map": "/react_star_wars/static/css/main.d7884ac4.css.map",
+    "main.6c83ec89.js.map": "/react_star_wars/static/js/main.6c83ec89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7884ac4.css",
+    "static/js/main.6c83ec89.js"
+  ]
+}
